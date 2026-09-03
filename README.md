@@ -2,7 +2,7 @@
 
 **制作者**  
 ゆっくりぴっと  
-[https://x.com/yukkuri_pit](https://x.com/yukkuri_pit)
+[https://x.com/yukkurinadi](https://x.com/yukkurinadi)
 
 ## 概要
 
