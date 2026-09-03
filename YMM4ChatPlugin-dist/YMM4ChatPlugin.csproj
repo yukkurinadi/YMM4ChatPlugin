@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<Nullable>enable</Nullable>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
+	<!-- ★ ビルドする環境の YMM4 インストール先に合わせて変更してください ★ -->
+	<PropertyGroup>
+		<YMM4Dir Condition="'$(YMM4Dir)' == ''">C:\YMM4</YMM4Dir>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="YukkuriMovieMaker.Plugin">
+			<HintPath>$(YMM4Dir)\YukkuriMovieMaker.Plugin.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="YukkuriMovieMaker.Controls">
+			<HintPath>$(YMM4Dir)\YukkuriMovieMaker.Controls.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- 利用規約・プライバシーポリシーをアセンブリに埋め込む -->
+		<EmbeddedResource Include="利用規約.md"/>
+		<EmbeddedResource Include="プライバシーポリシー.md"/>
+	</ItemGroup>
+</Project>
